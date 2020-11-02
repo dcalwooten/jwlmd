@@ -1,0 +1,168 @@
+:root {
+    --nav-width: 300px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #d7d7d7;
+    color: #222222;
+    text-align: center;
+    font-size: 16px;
+    font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
+}
+
+nav#side-nav {
+    position: fixed;
+    box-sizing: border-box;
+    max-width: var(--nav-width);
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+    background: #222222;
+    text-align: center;
+    color: #d7d7d7;
+}
+
+nav#side-nav > * {
+    margin: 0 20px;
+}
+
+nav#side-nav img#jof {
+    width: calc(100% - 40px);
+    margin-bottom: 20px;
+}
+
+nav#side-nav #button {
+    outline: 1px #d7d7d7;
+    position: absolute;
+    top: 20px;
+    left: calc(var(--nav-width) + 30px);
+}
+
+nav#side-nav #section-links {
+    margin-bottom: 20px;
+}
+
+nav#side-nav #section-links a {
+    display: block;
+    padding: 10px 0;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 4px;
+    text-decoration: none;
+    background-size: 200% 100%;
+    background-image: linear-gradient(to right, rgba(0,0,0,0) 50%, rgba(255, 255, 255, 0.3) 50%);
+    transition: background-position 0.2s;
+}
+
+nav#side-nav #section-links a:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+nav#side-nav #section-links a:hover {
+    background-position: -100% 0;
+}
+
+#socials div {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+#socials a {
+    text-decoration: none;
+}
+
+#socials a img {
+    width: 100%;
+    height: auto;
+}
+
+#socials div.facebook-btn {
+    background: #3E5C9A;
+}
+
+#socials div.instagram-btn {
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+}
+
+main {
+    position: relative;
+    height: 100%;
+    margin-left: var(--nav-width);
+    transition: margin-left 1.0;
+}
+
+main #nav-toggle {
+    display: none; /* hide for desktop view */
+    padding: 5px;
+    position: fixed;
+    top: 10px;
+    left: 0px;
+    background: #222222;
+    border-radius: 0 5px 5px 0;
+}
+
+main #nav-toggle button {
+    padding: 0;
+}
+
+nav#side-nav button#close-nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+}
+
+main img.banner {
+    width: 100%;
+    height: auto;
+}
+
+/* Resets */
+button, button:focus {
+    background: unset;
+    border: unset;
+    outline: unset;
+}
+
+/* Tablet and smaller device handling */
+@media (max-width: 834px) {
+
+    nav#side-nav {
+        width: 0px;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        transition: 0.3s;
+    }
+
+    nav#side-nav button#close-nav {
+        display: block;
+    }
+
+    nav#side-nav img#jof {
+        width: 170px;
+        height: auto;
+    }
+
+    main {
+        margin-left: 0;
+        transition: margin-left 0.3s;
+    }
+
+    main #nav-toggle {
+        display: block;
+    }
+
+}

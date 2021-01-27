@@ -1,14 +1,34 @@
+window.addEventListener('load', function()
+{
+    var navBar = document.getElementById('top-nav');
+    var navOffset = document.getElementById('top-nav').offsetTop;
 
-    function openNav()
-    {
-        document.getElementById("side-nav").style.width = "250px";
-        document.getElementById("open-nav").style.display = "none";
-        document.getElementById("close-nav").style.display = "block";
-        document.getElementById("side-nav").focus({preventScroll:true});
-    }
+    window.onscroll = function() { stickyNav() };
 
-    function closeNav() {
-        document.getElementById("side-nav").style.width = "0px";
-        document.getElementById("close-nav").style.display = "none";
-        document.getElementById("open-nav").style.display = "block";
+    function stickyNav() {
+        if (window.pageYOffset >= navOffset)
+        { navBar.classList.add('sticky'); }
+
+        else
+        { navBar.classList.remove('sticky'); }
     }
+});
+
+function openNav()
+{
+    document.getElementById("side-nav").style.width = "250px";
+    document.getElementById("open-nav").style.display = "none";
+    document.getElementById("close-nav").style.display = "block";
+    document.getElementById("side-nav").focus({preventScroll:true});
+}
+
+function closeNav() {
+    document.getElementById("side-nav").style.width = "0px";
+    document.getElementById("close-nav").style.display = "none";
+    document.getElementById("open-nav").style.display = "block";
+}
+
+function scrollToTop() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}

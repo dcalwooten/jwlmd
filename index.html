@@ -1,55 +1,87 @@
 <html>
     <head>
         <title>Jeremy Would Let Me Drown - Atlanta's Premiere Grunge Tribute Band</title>
-        <meta name="description" content="Atlanta-based tribute band bringing you hits and deep cuts by Pearl Jam, Alice in Chains, and Soundgarden. Book us for your venue or party, or check upcoming shows."/>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name='description' content='Atlanta-based tribute band bringing you hits and deep cuts by Pearl Jam, Alice in Chains, and Soundgarden. Book us for your venue or party, or check upcoming shows.'/>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
         <link rel='stylesheet' type='text/css' href='style.css'>
         <script type='text/javascript' src='functionality.js'></script>
     </head>
     <body>
-        <nav id='side-nav'>
-            <button id='close-nav' onclick='closeNav()'>
-                <img src='images/close_menu.png' alt='Hide the side navigation menu.'/>
-            </button>
-            <img id='jof' src='images/nav-logo.png' alt=''>
-            <div id='section-links'>
-                <a href='#home'>Home</a>
-                <a href='#shows'>Shows</a>
-                <a href='#bio'>Biography</a>
-            </div>
-            <div id='socials'>
-                <div class='facebook-btn'>
-                    <a href='https://www.facebook.com/JeremyWouldLetMeDrown/' target='_blank'>
-                        <img src='images/facebook.png' alt='Click to be directed to the Jeremy Would Let Me Drown Facebook page in a new tab'>
-                    </a>
+        <div id='page-container'>
+            <header>
+                <img class='banner' src='images/top-banner.jpg' alt='Jeremy Would Let Me Drown'/>
+                <nav id='top-nav'>
+                    <button id='scroll-top' class='cursor-pointer' onclick='scrollToTop()'>
+                        <img src='images/top.png' alt='Return to the top of the page.'/>
+                    </button>
+                    <div id='section-links'>
+                        <ul>
+                            <li>
+                                <div><a href='#home'>Home</a></div>
+                            </li>
+                            <li>
+                                <div><a href='#bio'>Biography</a></div>
+                            </li>
+                            <li>
+                                <div><a href='#shows'>Shows</a></div>
+                            </li>
+                            <li>
+                                <div><a href='#socials'>Socials</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <main id='main'>
+                <h1>Jeremy Would Let Me Drown</h1>
+                <h2>Atlanta's Premiere Grunge Tribute Band</h2>
+                <div class='video-container'>
+                    <video width='100%' height='100%' controls poster='images/promo-placeholder.png'>
+                        <source src='videos/promo.mp4' type='video/mp4'>
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
-                <div class='instagram-btn'>
-                    <a href='https://www.instagram.com/jeremywouldletmedrown/?hl=en' target='_blank'>
-                        <img src='images/instagram.png' alt='Click to be directed to the Jeremy Would Let Me Drown Instagram profile in a new tab'>
-                    </a>
-                </div>
-            </div>
-        </nav>
-        <main id="main">
-            <div id='nav-toggle'>
-                <button id='open-nav' onclick='openNav()'>
-                    <img src='images/open_menu.png' alt='Display the side navigation menu'/>
-                </button>
-            </div>
-            <a name='home'></a>
-            <img class='banner' src='images/top-banner.jpg' alt='Jeremy Would Let Me Drown'/>
-            <h2>Atlanta's Premiere Atlanta Grunge Tribute Band</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/d1gpf1_OXlk?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p></p>
-            <a name='shows'></a>
-            <div id='show'>
-                <h2>Upcoming Shows</h2>
-                <div style='height: 500px;'>&nbsp;</div>
-            </div>
-            <a name='bio'></a>
-            <div id='bio'>
-                <h2>Bio</h2>
-            </div>
-        </main>
+                <p></p>
+                <section>
+                    <a name='bio'></a>
+                    <div id='bio'>
+                        <h2>Bio</h2>
+                        <p><strong>Jeremy Would Let Me Drown</strong> pays tribute to Pearl Jam, Alice In Chains, and Soundgarden. Jeff Wheeler (vocals/drums) and Josh Padgett (vocals/guitar) flawlessly nail the diverse styles of all three bands' vocalists. The dual guitar attack of </p>
+                    </div>
+                </section>
+                <section>
+                    <a name='shows'></a>
+                    <div id='show'>
+                        <h2>Upcoming Shows</h2>
+                        <table>
+                            <tr>
+                                <td>Jan 22, 2021</td>
+                                <td>Sutton's American Grill</td>
+                                <td><a href='https://goo.gl/maps/bSPCuf2ExkQqSKXe9' target='_blank' rel='nofollow'>Directions</a></td>
+                            </tr>
+                            <tr>
+                                <td>Feb 5, 2021</td>
+                                <td>The Wing Cafe & Tap House</td>
+                                <td><a href='https://goo.gl/maps/qovrcu73JSMPjV6g8' target='_blank' rel='nofollow'>Directions</a></td>
+                            </tr>
+                            <tr>
+                                <td>May 1, 2021</td>
+                                <td>The Wing Cafe & Tap House</td>
+                                <td><a href='https://goo.gl/maps/qovrcu73JSMPjV6g8' target='_blank' rel='nofollow'>Directions</a></td>
+                            </tr>
+                            <tr>
+                                <td colspan='3'>More to be announced!</td>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+                <section>
+                    <a name='socials'></a>
+                    <div id='socials'>
+                        <h2>Socials</h2>
+                    </div>
+                </section>
+            </main>
+        </div>
     </body>
 </html>

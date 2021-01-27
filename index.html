@@ -1,55 +1,88 @@
 <html>
     <head>
         <title>Jeremy Would Let Me Drown - Atlanta's Premiere Grunge Tribute Band</title>
-        <meta name="description" content="Atlanta-based tribute band bringing you hits and deep cuts by Pearl Jam, Alice in Chains, and Soundgarden. Book us for your venue or party, or check upcoming shows."/>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name='description' content='Atlanta-based tribute band bringing you hits and deep cuts by Pearl Jam, Alice in Chains, and Soundgarden. Book us for your venue or party, or check upcoming shows.'/>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
         <link rel='stylesheet' type='text/css' href='style.css'>
         <script type='text/javascript' src='functionality.js'></script>
     </head>
     <body>
-        <nav id='side-nav'>
-            <button id='close-nav' onclick='closeNav()'>
-                <img src='images/close_menu.png' alt='Hide the side navigation menu.'/>
-            </button>
-            <img id='jof' src='images/nav-logo.png' alt=''>
-            <div id='section-links'>
-                <a href='#home'>Home</a>
-                <a href='#shows'>Shows</a>
-                <a href='#bio'>Biography</a>
-            </div>
-            <div id='socials'>
-                <div class='facebook-btn'>
-                    <a href='https://www.facebook.com/JeremyWouldLetMeDrown/' target='_blank'>
-                        <img src='images/facebook.png' alt='Click to be directed to the Jeremy Would Let Me Drown Facebook page in a new tab'>
-                    </a>
+        <div id='page-container'>
+            <header>
+                <img class='banner' src='images/top-banner.jpg' alt='Jeremy Would Let Me Drown'/>
+                <nav id='top-nav'>
+                    <div id='section-links'>
+                        <ul>
+                            <li>
+                                <div><a href='#'>Home</a></div>
+                            </li>
+                            <li>
+                                <div><a href='#biography'>Biography</a></div>
+                            </li>
+                            <li>
+                                <div><a href='#shows'>Shows</a></div>
+                            </li>
+                            <li>
+                                <div><a href='#contact'>Contact</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <main id='main'>
+                <h1>Jeremy Would Let Me Drown</h1>
+                <h2>Atlanta's Premiere Grunge Tribute Band</h2>
+                <div class='embed-container'>
+                    <iframe src='https://www.youtube.com/embed/Wdm7KoaZRJI?rel=0' frameborder='0' allowfullscreen></iframe>
                 </div>
-                <div class='instagram-btn'>
-                    <a href='https://www.instagram.com/jeremywouldletmedrown/?hl=en' target='_blank'>
-                        <img src='images/instagram.png' alt='Click to be directed to the Jeremy Would Let Me Drown Instagram profile in a new tab'>
-                    </a>
-                </div>
-            </div>
-        </nav>
-        <main id="main">
-            <div id='nav-toggle'>
-                <button id='open-nav' onclick='openNav()'>
-                    <img src='images/open_menu.png' alt='Display the side navigation menu'/>
-                </button>
-            </div>
-            <a name='home'></a>
-            <img class='banner' src='images/top-banner.jpg' alt='Jeremy Would Let Me Drown'/>
-            <h2>Atlanta's Premiere Atlanta Grunge Tribute Band</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/d1gpf1_OXlk?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p></p>
-            <a name='shows'></a>
-            <div id='show'>
-                <h2>Upcoming Shows</h2>
-                <div style='height: 500px;'>&nbsp;</div>
-            </div>
-            <a name='bio'></a>
-            <div id='bio'>
-                <h2>Bio</h2>
-            </div>
-        </main>
+                <p></p>
+                <section>
+                    <a name='biography'></a>
+                    <div id='biography'>
+                        <h2>Biography</h2>
+                        <img class='section-img float-left' src='images/jwlmd-bio.jpg' alt='Composite image of members of Jeremy Would Let Me Drown performing on stage.'>
+                        <p><strong>Grunge ain't dead, it just (still) smells funny.</strong> Jeremy Would Let Me Drown has rocked stages throughout north Georgia with the timeless songs of esteemed grunge pioneers <strong>Pearl Jam</strong>, <strong>Alice in Chains</strong>, and <strong>Soundgarden</strong>. Whether it's the hits that defined a generation or the hidden gems that'll wow the most die-hard of fans, Jeremy Would Let Me Drown recreates the passion and showmanship of the legends for each performance.</p>
+                    </div>
+                </section>
+                <section>
+                    <a name='shows'></a>
+                    <div id='show'>
+                        <h2>Upcoming Shows</h2>
+                        <table>
+                            <tr>
+                                <td>Feb 5, 2021</td>
+                                <td>The Wing Cafe & Tap House</td>
+                                <td><a href='https://goo.gl/maps/qovrcu73JSMPjV6g8' target='_blank' rel='nofollow'>Directions</a></td>
+                            </tr>
+                            <tr>
+                                <td>May 1, 2021</td>
+                                <td>The Wing Cafe & Tap House</td>
+                                <td><a href='https://goo.gl/maps/qovrcu73JSMPjV6g8' target='_blank' rel='nofollow'>Directions</a></td>
+                            </tr>
+                            <tr>
+                                <td colspan='3'>More to be announced!</td>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+                <section>
+                    <a name='contact'></a>
+                    <div id='contact'>
+                        <h2>Contact</h2>
+                        <p style='text-align: center;'>Email: JeremyWouldLetMeDrown@gmail.com</p>
+                        <div class='social-media-btn facebook'>
+                            <a href='https://www.facebook.com/JeremyWouldLetMeDrown/' target='_blank'>
+                                <img src='images/facebook.png' alt='Click to be directed to the Jeremy Would Let Me Drown Facebook page in a new tab'>
+                            </a>
+                        </div>
+                        <div class='social-media-btn instagram'>
+                            <a href='https://www.instagram.com/jeremywouldletmedrown/?hl=en' target='_blank'>
+                                <img src='images/instagram.png' alt='Click to be directed to the Jeremy Would Let Me Drown Instagram profile in a new tab'>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
     </body>
 </html>

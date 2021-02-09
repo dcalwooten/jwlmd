@@ -118,6 +118,10 @@ main section p {
     text-align: left;
 }
 
+main section p:first-of-type::first-line {
+    font-weight: 600;
+}
+
 main img.banner {
     width: 100%;
     height: auto;

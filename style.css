@@ -27,7 +27,7 @@ header img {
     width: 100%;
 }
 
-#top-nav {
+header nav {
     width: 100%;
     height: 50px;
     position: absolute;
@@ -38,22 +38,34 @@ header img {
     transition: background 0.3;
 }
 
-#top-nav.sticky {
+header nav.sticky {
     position: fixed;
     top: 0;
     max-width: 80%;
     width: 100%;
     background: rgba(0, 0, 0, 1.4);
-    border-bottom: 1px #d7d7d7 solid;
 }
 
-#top-nav ul {
+header nav button#menu-toggle {
+    display: none; /* hide for desktop view */
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 5px 10px;
+    border: #d7d7d7 1px solid;
+    border-radius: 10px;
+    background: #000000;
+    color: #d7d7d7;
+}
+
+header nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-#top-nav li {
+header nav li {
     display: inline-block;
     width: auto;
     height: auto;
@@ -63,48 +75,15 @@ header img {
     transition: background-position 0.2s;
 }
 
-#top-nav a {
+header nav li:hover {
+    background-position: 0 100%;
+}
+
+header nav li a {
     height: 100%;
     padding: 10px 30px;
     line-height: 2.1em;
     color: #d7d7d7;
-}
-
-#top-nav li:hover {
-    background-position: 0 100%;
-}
-
-#top-nav button#scroll-top {
-    display: none; /* hide button if at top of page */
-    position: absolute;
-    top: 10px;
-    right: 20px;
-}
-
-#top-nav.sticky button#scroll-top {
-    display: block;
-}
-
-main #nav-toggle {
-    display: none; /* hide for desktop view */
-    padding: 5px;
-    position: fixed;
-    top: 10px;
-    left: 0px;
-    background: #222222;
-    border-radius: 0 5px 5px 0;
-}
-
-main #nav-toggle button {
-    padding: 0;
-}
-
-nav#side-nav button#close-nav {
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
 }
 
 main section {
@@ -116,6 +95,10 @@ main section p {
     font-size: 1.2em;
     line-height: 2em;
     text-align: left;
+}
+
+main section p:first-of-type::first-line {
+    font-weight: 600;
 }
 
 main img.banner {
@@ -229,6 +212,7 @@ button, button:focus {
     background: unset;
     border: unset;
     outline: unset;
+    font-size: 1em;
 }
 
 a {
@@ -247,28 +231,42 @@ video:focus {
 /* Tablet and smaller device handling */
 @media (max-width: 834px) {
 
-    nav#side-nav {
-        width: 0px;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        overflow-x: hidden;
-        transition: 0.3s;
+    #page-container {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
     }
 
-    nav#side-nav button#close-nav {
+    header nav button#menu-toggle {
         display: block;
     }
 
-    nav#side-nav img#jof {
-        width: 170px;
-        height: auto;
+    header nav.sticky {
+        max-width: 100%;
     }
 
-    #page-container {
-        max-width: calc(100% - 20px);
-        width: 100%;
-        margin: 0 auto;
+    header nav ul {
+        display: none;
+        margin-top: 50px;
+    }
+
+    header nav ul.is-active {
+        display: block;
+    }
+
+    header nav ul li {
+        display: block;
+        background: #222;
+    }
+
+    header nav ul li:hover,
+    header nav ul li:active,
+    header nav ul li:focus {
+        background: #000000;
+    }
+
+    main {
         padding: 0 10px;
     }
 

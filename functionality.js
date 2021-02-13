@@ -5,6 +5,8 @@ window.addEventListener('load', function()
 
     window.onscroll = function() { stickyNav() };
 
+    window.dispatchEvent(new CustomEvent('scroll'))
+
     function stickyNav() {
         if (window.pageYOffset >= navOffset)
         { navBar.classList.add('sticky'); }
@@ -12,18 +14,22 @@ window.addEventListener('load', function()
         else
         { navBar.classList.remove('sticky'); }
     }
+
+    var menu = document.getElementById('menu'),
+        menuToggle = document.getElementById('menu-toggle')
+
+    menuToggle.addEventListener('click', function()
+    {
+        if (menu.classList.contains('is-active'))
+        {
+            menu.classList.remove('is-active');
+            this.setAttribute('aria-expanded', 'false');
+        }
+
+        else
+        {
+            menu.classList.add('is-active');
+            this.setAttribute('aria-expanded', 'true');
+        }
+    });
 });
-
-function openNav()
-{
-    document.getElementById("side-nav").style.width = "250px";
-    document.getElementById("open-nav").style.display = "none";
-    document.getElementById("close-nav").style.display = "block";
-    document.getElementById("side-nav").focus({preventScroll:true});
-}
-
-function closeNav() {
-    document.getElementById("side-nav").style.width = "0px";
-    document.getElementById("close-nav").style.display = "none";
-    document.getElementById("open-nav").style.display = "block";
-}

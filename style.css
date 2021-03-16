@@ -150,6 +150,25 @@ main section table tr td:last-child {
     border-right: 1px solid #d7d7d7;
 }
 
+section #member-bios #member-images {
+    width: 100%;
+    text-align: center;
+}
+
+section #member-bios #member-images img {
+    max-width: calc(25% - 11px);
+    margin: 3px;
+}
+
+section #member-bios #member-bio-text div[id^='bio-'] {
+    display: none;
+    width: 100%;
+}
+
+section #member-bios #member-bio-text div[id^='bio-'].active {
+    display: block;
+}
+
 .embed-container {
     position: relative;
     max-width: 100%;

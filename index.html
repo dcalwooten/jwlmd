@@ -58,7 +58,81 @@
                         together in honor of and tribute to these bands that they love and respect so much. Do not miss
                         an opportunity to see Jeremy Would Let Me Drown!</p>
                 </div>
+                <script type='module'>
+                    import { createApp } from 'https://unpkg.com/petite-vue?module';
+
+                    // functionality for switching individual member bios
+                    createApp({
+                        selectedBio: 'jeff'
+                    }).mount('#member-bios');
+                </script>
+                <div id='member-bios'>
+                    <h2>Members</h2>
+                    <div id='member-images'>
+                        <img src='images/bio_jeff.jpg' alt='Jeff Wheeler singing while playing drums.'
+                            @click='selectedBio = "jeff"'>
+                        <img src='images/bio_josh.jpg' alt='Josh Padgett singing while playing guitar.'
+                            @click='selectedBio = "josh"'>
+                        <img src='images/bio_keith.jpg' alt='Keith Tuggle playing bass guitar.'
+                            @click='selectedBio = "keith"'>
+                        <img src='images/bio_ben.jpg' alt='Ben Daniels playing guitar.' @click='selectedBio = "ben"'>
+                    </div>
+                    <div id='member-bio-text'>
+                        <div v-if='selectedBio === "jeff"'>
+                            <h3>Jeff Wheeler</h3>
+                            <p>
+                                Loves: Hockey and his kids<br>
+                                Loathes: Social media in general<br>
+                                Dreams of: Living in a van down by a frozen river to eternally play hockey and drums<br>
+                                Afraid of: People that are afraid of things<br>
+                                Likes when Pearl Jam: Screams about political divisiveness<br>
+                                Likes when Alice In Chains: Sings in harmonies so he can sing with Josh.<br>
+                                Likes when Soundgarden: Wrote recoded and released Down on the Upside.
+                            </p>
+                        </div>
+                        <div v-if='selectedBio === "josh"'>
+                            <h3>Josh Padgett</h3>
+                            <p>
+                                Loves: Smoking cigarettes<br>
+                                Loathes: Smoking cigarettes<br>
+                                Dreams of: Writing and performing original music on a regular basis and with financial
+                                gain<br>
+                                Afraid of: Living beyond age 30 (he thinks 30 is "old")<br>
+                                Likes when Pearl Jam: Gets political and roudy (e.g., Leash)<br>
+                                Likes when Alice in Chains: Rocks the harmonies (e.g., Brother)<br>
+                                Likes when Soundgarden: Showcases Cornell's badass wail (e.g., Slaves & Bulldozers).
+                            </p>
+                        </div>
+                        <div v-if='selectedBio === "keith"'>
+                            <h3>Keith Tuggle</h3>
+                            <p>
+                                Likes: Cooking and exploring ITP<br>
+                                Loathes: Narrow minds and narrow roads<br>
+                                Dreams of: Owning hundreds of cuddly animals<br>
+                                Afraid of: Death by suffocation in his sleep from too many furry animals sleeping on his
+                                face (see "dreams of" above)<br>
+                                Likes when Pearl Jam: Gets angry (e.g., Why Go)<br>
+                                Likes when Alice in Chains: Gets riffy (e.g., Dam That River)<br>
+                                Likes when Soundgarden: Gets complicated (e.g., By Crooked Steps)
+                            </p>
+                        </div>
+                        <div v-if='selectedBio === "ben"'>
+                            <h3>Ben Daniels</h3>
+                            <p>
+                                Loves: Cats and craft beer<br>
+                                Loathes: Political divisiveness on social media (unless it somehow involves
+                                aforementioned loves)<br>
+                                Dreams of: Owning and operating a fully-operational music studio<br>
+                                Afraid of: Admitting that his love language is hugs from band mates<br>
+                                Likes when Pearl Jam: Utilizes 2 guitars well<br>
+                                Likes when Alice in Chains: Plays fat riffs<br>
+                                Likes when Soundgarden: Rocks slow and hard
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </section>
+
             <section>
                 <a name='shows'></a>
                 <div id='show'>

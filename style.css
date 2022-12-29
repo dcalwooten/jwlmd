@@ -156,6 +156,30 @@ section #member-bios #member-images {
 }
 
 section #member-bios #member-images img {
+    transition: 0.2s;
+}
+
+section #member-bios #member-images.jeff #jeffImg {
+    filter: sepia(100%) hue-rotate(163deg) saturate(500%);
+    transform: scale(1.1);
+}
+
+section #member-bios #member-images.josh #joshImg {
+    filter: sepia(100%) hue-rotate(319deg) saturate(500%);
+    transform: scale(1.1);
+}
+
+section #member-bios #member-images.keith #keithImg {
+    filter: sepia(100%) hue-rotate(139deg) saturate(500%);
+    transform: scale(1.1);
+}
+
+section #member-bios #member-images.ben #benImg {
+    filter: sepia(100%) hue-rotate(39deg) saturate(500%);
+    transform: scale(1.1);
+}
+
+section #member-bios #member-images img {
     max-width: calc(25% - 11px);
     margin: 3px;
 }

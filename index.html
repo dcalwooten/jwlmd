@@ -68,14 +68,15 @@
                 </script>
                 <div id='member-bios'>
                     <h2>Members</h2>
-                    <div id='member-images'>
-                        <img src='images/bio_jeff.jpg' alt='Jeff Wheeler singing while playing drums.'
+                    <div id='member-images' :class='selectedBio'>
+                        <img id='jeffImg' src=' images/bio_jeff.jpg' alt='Jeff Wheeler singing while playing drums.'
                             @click='selectedBio = "jeff"'>
-                        <img src='images/bio_josh.jpg' alt='Josh Padgett singing while playing guitar.'
+                        <img id='joshImg' src='images/bio_josh.jpg' alt='Josh Padgett singing while playing guitar.'
                             @click='selectedBio = "josh"'>
-                        <img src='images/bio_keith.jpg' alt='Keith Tuggle playing bass guitar.'
+                        <img id='keithImg' src='images/bio_keith.jpg' alt='Keith Tuggle playing bass guitar.'
                             @click='selectedBio = "keith"'>
-                        <img src='images/bio_ben.jpg' alt='Ben Daniels playing guitar.' @click='selectedBio = "ben"'>
+                        <img id='benImg' src='images/bio_ben.jpg' alt='Ben Daniels playing guitar.'
+                            @click='selectedBio = "ben"'>
                     </div>
                     <div id='member-bio-text'>
                         <div v-if='selectedBio === "jeff"'>

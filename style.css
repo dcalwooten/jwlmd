@@ -150,6 +150,49 @@ main section table tr td:last-child {
     border-right: 1px solid #d7d7d7;
 }
 
+section #member-bios #member-images {
+    width: 100%;
+    text-align: center;
+}
+
+section #member-bios #member-images img {
+    transition: 0.2s;
+}
+
+section #member-bios #member-images.jeff #jeffImg {
+    filter: sepia(100%) hue-rotate(163deg) saturate(500%);
+    transform: scale(1.1);
+}
+
+section #member-bios #member-images.josh #joshImg {
+    filter: sepia(100%) hue-rotate(319deg) saturate(500%);
+    transform: scale(1.1);
+}
+
+section #member-bios #member-images.keith #keithImg {
+    filter: sepia(100%) hue-rotate(139deg) saturate(500%);
+    transform: scale(1.1);
+}
+
+section #member-bios #member-images.ben #benImg {
+    filter: sepia(100%) hue-rotate(39deg) saturate(500%);
+    transform: scale(1.1);
+}
+
+section #member-bios #member-images img {
+    max-width: calc(25% - 11px);
+    margin: 3px;
+}
+
+section #member-bios #member-bio-text div[id^='bio-'] {
+    display: none;
+    width: 100%;
+}
+
+section #member-bios #member-bio-text div[id^='bio-'].active {
+    display: block;
+}
+
 .embed-container {
     position: relative;
     max-width: 100%;
@@ -192,6 +235,12 @@ div.social-media-btn {
     margin: 10px;
     border-radius: 50%;
     transition: width height;
+    transition: 0.6s;
+}
+
+.social-media-btn:hover,
+.social-media-btn:focus {
+    transform: scale(1.3);
 }
 
 .social-media-btn a img {

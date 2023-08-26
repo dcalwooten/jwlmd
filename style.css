@@ -192,7 +192,7 @@ section #member-bios #member-images.jeff #jeffImg {
     transform: scale(1.1);
 }
 
-section #member-bios #member-images.josh #joshImg {
+section #member-bios #member-images.tom #tomImg {
     filter: sepia(100%) hue-rotate(319deg) saturate(500%);
     transform: scale(1.1);
 }

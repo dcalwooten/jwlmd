@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'RoadRage-Regular';
+    src: url('assets/RoadRage-Regular.ttf');
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -5,8 +10,8 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background: #000000;
-    color: #d7d7d7;
+    background: #ffffff;
+    color: #333;
     text-align: center;
     font-size: 16px;
     font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
@@ -89,6 +94,29 @@ header nav li a {
 main section {
     padding: 20px 0;
     clear: both;
+}
+
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6 {
+    font-family: 'RoadRage-Regular';
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+main h1 {
+    font-size: 3.3em;
+}
+
+main h2 {
+    font-size: 2.5em;
+}
+
+main h3 {
+    font-size: 2em;
 }
 
 main section p {
@@ -213,9 +241,7 @@ section #member-bios #member-bio-text div[id^='bio-'].active {
 }
 
 img.section-img {
-    max-width: 300px;
     width: 100%;
-    margin-top: 10px;
 }
 
 img.section-img.float-left {

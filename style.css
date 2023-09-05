@@ -1,6 +1,11 @@
 @font-face {
     font-family: 'RoadRage-Regular';
-    src: url('assets/RoadRage-Regular.ttf');
+    src: url('assets/TrajanSansPro-Semibold.otf');
+}
+
+:root {
+    --primary-accent-color: #9da06b;
+    --secondary-accent-color: #e7292e;
 }
 
 html {
@@ -35,12 +40,10 @@ header img {
 header nav {
     width: 100%;
     height: 50px;
-    position: absolute;
-    bottom: 0;
     z-index: 2;
-    background: rgba(0, 0, 0, 0.4);
     font-size: 1.5em;
     transition: background 0.3;
+    background: #fff;
 }
 
 header nav.sticky {
@@ -48,7 +51,7 @@ header nav.sticky {
     top: 0;
     max-width: 80%;
     width: 100%;
-    background: rgba(0, 0, 0, 1.4);
+    border-bottom: 1px solid var(--primary-accent-color);
 }
 
 header nav button#menu-toggle {
@@ -61,7 +64,7 @@ header nav button#menu-toggle {
     border: #d7d7d7 1px solid;
     border-radius: 10px;
     background: #000000;
-    color: #d7d7d7;
+    color: #333;
 }
 
 header nav ul {
@@ -76,7 +79,7 @@ header nav li {
     height: auto;
     margin: 0;
     background-size: 100% 200%;
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0, 0, 0, 0.6) 50%);
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0, 0, 0, 0.2) 50%);
     transition: background-position 0.2s;
 }
 
@@ -88,11 +91,11 @@ header nav li a {
     height: 100%;
     padding: 10px 30px;
     line-height: 2.1em;
-    color: #d7d7d7;
+    color: #333;
 }
 
 main section {
-    padding: 20px 0;
+    padding: 10px 0;
     clear: both;
 }
 
@@ -108,11 +111,12 @@ main h6 {
 }
 
 main h1 {
-    font-size: 3.3em;
+    font-size: 2.8em;
+    color: var(--primary-accent-color);
 }
 
 main h2 {
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
 main h3 {
@@ -134,48 +138,56 @@ main img.banner {
     height: auto;
 }
 
-main section table {
+main #list-container {
     width: 100%;
-    border-collapse: collapse;
+}
+
+main .show-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--primary-accent-color);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
     font-size: 1.3em;
+    text-align: left;
 }
 
-main section table tr td {
-    padding: 20px;
-    border-top: 1px solid #d7d7d7;
-    border-bottom: 1px solid #d7d7d7;
+main .show-item > div {
+    padding: 10px;
 }
 
-main section table a {
-    color: #3b74f0;
-    text-decoration: underline;
+main .show-item .show-date {
+    display: block;
+    width: 100%;
+    color: var(--primary-accent-color);
+    margin-bottom: 10px;
+    font-style: italic;
 }
 
-main section table tr:hover {
-    background: #d7d7d7;
-    color: #000000;
+main .show-item .directions {
+    transition: 0.3s;
+    background-color: var(--primary-accent-color);
+    border-radius: 5px;
+    padding: 10px 25px;
+    color: #fff;
 }
 
-main section table tr:hover a {
-    color: #000000;
+main .show-item .directions:hover {
+    background-color: var(--secondary-accent-color);
 }
 
-main section table tr td:only-child {
+main #more-tba {
+    margin: 10px auto;
+    width: 100%;
     text-align: center;
+    font-weight: 400;
+    font-size: 1.5em;
 }
 
-main section table tr td:first-child {
-    width: 25%;
-    border-left: 1px solid #d7d7d7;
-}
-
-main section table tr td:nth-child(2) {
-    width: 50%;
-}
-
-main section table tr td:last-child {
-    width: 25%;
-    border-right: 1px solid #d7d7d7;
+section #member-bios {
+    display: none;
 }
 
 section #member-bios #member-images {
@@ -332,13 +344,21 @@ video:focus {
 
     header nav ul li {
         display: block;
-        background: #222;
+        background: #fff;
+        border-bottom: 1px solid var(--primary-accent-color);
     }
 
     header nav ul li:hover,
     header nav ul li:active,
     header nav ul li:focus {
-        background: #000000;
+        background: var(--primary-accent-color);
+        color: #fff;
+    }
+
+    header nav ul li:hover a,
+    header nav ul li:active a,
+    header nav ul li:focus a {
+        color: #fff;
     }
 
     main {
@@ -366,4 +386,9 @@ video:focus {
         margin-left: 0;
     }
 
+    main .show-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }

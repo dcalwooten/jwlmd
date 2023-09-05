@@ -14,7 +14,9 @@
         <header>
             <img class='banner' src='images/top-banner.jpg' alt='Jeremy Would Let Me Drown' />
             <nav id='top-nav' role='navigation'>
-                <button id='menu-toggle' aria-controls='menu' aria-expanded='false'>Menu</button>
+                <button id='menu-toggle' aria-controls='menu' aria-expanded='false'>
+                    <img src='images\open_menu.png' alt=''>
+                </button>
                 <ul id='menu'>
                     <li>
                         <div><a href='#'>Home</a></div>
@@ -137,72 +139,92 @@
                 <a name='shows'></a>
                 <div id='show'>
                     <h2>Upcoming Shows</h2>
-                    <table>
-                        <tr>
-                            <td>Jul 28, 2023</td>
-                            <td>Tannery Row - <strong style="color:#B2505E;">**80'S VS 90'S WITH <a
-                                        href='https://www.denimarcade.com/' target='_blank'>DENIM
-                                        ARCADE</a>**</strong></td>
-                            <td><a href='https://goo.gl/maps/qtHRwqXR4v9Vs7sB6' target='_blank'
-                                    rel='nofollow'>Directions</a></td>
-                        </tr>
-                        <tr>
-                            <td>Jul 29, 2023</td>
-                            <td>Boot Barn - Gainesville</td>
-                            <td><a href='https://goo.gl/maps/keopwW85KX9wNaxh6' target='_blank'
-                                    rel='nofollow'>Directions</a></td>
-                        </tr>
-                        <tr>
-                            <td>Aug 4, 2023</td>
-                            <td>The Wing Cafe & Tap House</td>
-                            <td><a href='https: //goo.gl/maps/qovrcu73JSMPjV6g8' target='_blank'
-                                    rel='nofollow'>Directions</a></td>
-                        </tr>
-                        <tr>
-                            <td>Aug 19, 2023</td>
-                            <td>Dixie Tavern - <strong style="color:#B2505E;">**80's VS 90's WITH <a
-                                        href="https://madmargritt.com/" target="_blank" rel="nofollow"
-                                        style="color:#3b74f0;">MAD MARGRITT</a>**</strong></td>
-                            <td><a href='https://g.page/DixieTavernAtlanta?share' target='_blank'
-                                    rel='nofollow'>Directions</a></td>
-                        </tr>
-                        <tr>
-                            <td>Sep 22, 2023</td>
-                            <td>Southern Roots - McDonough</td>
-                            <td><a href='https://goo.gl/maps/McUZKx4eZUbUJDGk9' target='_blank'
-                                    rel='nofollow'>Directions</a></td>
-                        </tr>
-                        <tr>
-                            <td>Oct 20, 2023</td>
-                            <td>The Wing Cafe & Tap House</td>
-                            <td><a href='https://goo.gl/maps/qovrcu73JSMPjV6g8' target='_blank'
-                                    rel='nofollow'>Directions</a></td>
-                        </tr>
-                        <tr>
-                            <td>Nov 10, 2023</td>
-                            <td>Joe's Sports Bar & Grill - <strong style="color:#B2505E;">**80'S VS 90'S WITH <a
-                                        href='https://www.denimarcade.com/' target='_blank'>DENIM
-                                        ARCADE</a>**</strong></td>
-                            <td><a href='https://goo.gl/maps/DPXxBAuQGMgbcifW7' target=' _blank'
-                                    rel='nofollow'>Directions</a></td>
-                        </tr>
-                        <tr>
-                            <td>Dec 8, 2023</td>
-                            <td>The Wing Cafe & Tap House</td>
-                            <td><a href='https://goo.gl/maps/qovrcu73JSMPjV6g8' target='_blank'
-                                    rel='nofollow'>Directions</a></td>
-                        </tr>
-                        <tr>
-                            <td>Dec 9, 2023</td>
-                            <td>Chevelle's - Murphy, NC</td>
-                            <td><a href='https://goo.gl/maps/bVbqARox7VvFXCDj9' target='_blank'
-                                    rel='nofollow'>Directions</a></td>
-                        </tr>
-                        <tr>
-                            <td colspan='3'>More to be announced!</td>
-                        </tr>
-                    </table>
+                    <div id='list-container'>
+                        <div class='show-item'>
+                            <div class='show-left'>
+                                <span class='show-date'>Sep 22, 2023</span>
+                                <span class='show-description'>Southern Roots - McDonough</span>
+                            </div>
+                            <div class='show-right'>
+                                <a class='directions' href='https://goo.gl/maps/McUZKx4eZUbUJDGk9' target='_blank'
+                                    rel='nofollow'>Directions</a>
+                            </div>
+                        </div>
+                        <div class='show-item'>
+                            <div class='show-left'>
+                                <span class='show-date'>Oct 20, 2023</span>
+                                <span class='show-description'>The Wing Cafe & Tap House</span>
+                            </div>
+                            <div class='show-right'>
+                                <a class='directions' href='https://goo.gl/maps/qovrcu73JSMPjV6g8' target='_blank'
+                                    rel='nofollow'>Directions</a>
+                            </div>
+                        </div>
+                        <div class='show-item'>
+                            <div class='show-left'>
+                                <span class='show-date'>Nov 10, 2023</span>
+                                <span class='show-description'>
+                                    Joe's Sports Bar & Grill -
+                                    <br>
+                                    <strong style="color:#B2505E;">**80'S VS 90'S WITH <a
+                                            href='https://www.denimarcade.com/' target='_blank'>DENIM
+                                            ARCADE</a>**</strong>
+                                </span>
+                            </div>
+                            <div class='show-right'>
+                                <a class='directions' href='https://goo.gl/maps/DPXxBAuQGMgbcifW7' target='_blank'
+                                    rel='nofollow'>Directions</a>
+                            </div>
+                        </div>
+                        <div class='show-item'>
+                            <div class='show-left'>
+                                <span class='show-date'>Nov 18, 2023</span>
+                                <span class='show-description'>
+                                    Dixie Tavern -
+                                    <br>
+                                    <strong style="color:#B2505E;">**80'S VS 90'S WITH <a
+                                            href='https://www.denimarcade.com/' target='_blank'>DENIM
+                                            ARCADE</a>**</strong>
+                                </span>
+                            </div>
+                            <div class='show-right'>
+                                <a class='directions' href='https://g.page/DixieTavernAtlanta?share' target='_blank'
+                                    rel='nofollow'>Directions</a>
+                            </div>
+                        </div>
+                        <div class='show-item'>
+                            <div class='show-left'>
+                                <span class='show-date'>Nov 25, 2023</span>
+                                <span class='show-description'>Blackstrap Rock Hall</span>
+                            </div>
+                            <div class='show-right'>
+                                <a class='directions' href='https://goo.gl/maps/RtYHJrZG9beF6mef9' target='_blank'
+                                    rel='nofollow'>Directions</a>
+                            </div>
+                        </div>
+                        <div class='show-item'>
+                            <div class='show-left'>
+                                <span class='show-date'>Dec 8, 2023</span>
+                                <span class='show-description'>The Wing Cafe & Tap House</span>
+                            </div>
+                            <div class='show-right'>
+                                <a class='directions' href='https://goo.gl/maps/qovrcu73JSMPjV6g8' target='_blank'
+                                    rel='nofollow'>Directions</a>
+                            </div>
+                        </div>
+                        <div class='show-item'>
+                            <div class='show-left'>
+                                <span class='show-date'>Dec 9, 2023</span>
+                                <span class='show-description'>Chevelle's - Murphy, NC</span>
+                            </div>
+                            <div class='show-right'>
+                                <a class='directions' href='https://goo.gl/maps/bVbqARox7VvFXCDj9' target='_blank'
+                                    rel='nofollow'>Directions</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <div id='more-tba'>More to be announced!</div>
             </section>
             <section>
                 <a name='contact'></a>

@@ -14,7 +14,9 @@
         <header>
             <img class='banner' src='images/top-banner.jpg' alt='Jeremy Would Let Me Drown' />
             <nav id='top-nav' role='navigation'>
-                <button id='menu-toggle' aria-controls='menu' aria-expanded='false'>Menu</button>
+                <button id='menu-toggle' aria-controls='menu' aria-expanded='false'>
+                    <img src='images\open_menu.png' alt=''>
+                </button>
                 <ul id='menu'>
                     <li>
                         <div><a href='#'>Home</a></div>
@@ -42,15 +44,15 @@
                 <a name='biography'></a>
                 <div id='biography'>
                     <h2>Biography</h2>
-                    <img class='section-img float-left' src='images/jwlmd-bio.jpg'
-                        alt='Composite image of members of Jeremy Would Let Me Drown performing on stage.'>
+                    <img class='section-img' src='images/band_photo_crop.jpg'
+                        alt='Members of Jeremy Would Let Me Drown posed together. From left to right: Tom, Jeff, Keith, and Ben.'>
                     <p>Harkening back to a time when flannel, chain wallets, and combat boots reigned supreme and when
                         people actually watched music videos on television, <strong>Jeremy Would Let Me Drown</strong>
                         brings you the music of three pioneers of the grunge rock movement: Pearl Jam, Alice in Chains,
                         and Soundgarden.</p>
                     <p>With a desire to replicate the nostalgia of the time and the musicianship that crafted so many
                         incredible songs, JWLMD gives fans of these three juggernaut rock bands an opportunity to see
-                        their music come alive on one stage together. Guitarist Josh Padgett and drummer Jeff Wheeler
+                        their music come alive on one stage together. Guitarist Tom Blair and drummer Jeff Wheeler
                         share vocal duties to recreate the gritty style and lyrical angst of Eddie Vedder, the haunting
                         harmonies of Layne Staley and Jerry Cantrell, and the dual-threat, deep-and-wailing vocal
                         acrobatics of Chris Cornell. Combined with the impressive leads and solos from Ben Daniels on
@@ -71,8 +73,8 @@
                     <div id='member-images' :class='selectedBio'>
                         <img id='jeffImg' src=' images/bio_jeff.jpg' alt='Jeff Wheeler singing while playing drums.'
                             @click='selectedBio = "jeff"'>
-                        <img id='joshImg' src='images/bio_josh.jpg' alt='Josh Padgett singing while playing guitar.'
-                            @click='selectedBio = "josh"'>
+                        <img id='tomImg' src='images/bio_tom.jpg' alt='Tom Blair singing while playing guitar.'
+                            @click='selectedBio = "tom"'>
                         <img id='keithImg' src='images/bio_keith.jpg' alt='Keith Tuggle playing bass guitar.'
                             @click='selectedBio = "keith"'>
                         <img id='benImg' src='images/bio_ben.jpg' alt='Ben Daniels playing guitar.'
@@ -87,21 +89,20 @@
                                 Dreams of: Living in a van down by a frozen river to eternally play hockey and drums<br>
                                 Afraid of: People that are afraid of things<br>
                                 Likes when Pearl Jam: Screams about political divisiveness<br>
-                                Likes when Alice In Chains: Sings in harmonies so he can sing with Josh.<br>
+                                Likes when Alice In Chains: Sings in harmonies so he can sing with Tom.<br>
                                 Likes when Soundgarden: Wrote recoded and released Down on the Upside.
                             </p>
                         </div>
-                        <div v-if='selectedBio === "josh"'>
-                            <h3>Josh Padgett</h3>
+                        <div v-if='selectedBio === "tom"'>
+                            <h3>Tom Blair</h3>
                             <p>
-                                Loves: 80s Japanese pop music<br>
-                                Loathes: Not wearing socks<br>
-                                Dreams of: Writing and performing original music on a regular basis and with financial
-                                gain<br>
-                                Afraid of: Living beyond age 30 (he thinks 30 is "old")<br>
-                                Likes when Pearl Jam: Gets political and rowdy (e.g., Leash)<br>
-                                Likes when Alice in Chains: Rocks the harmonies (e.g., Brother)<br>
-                                Likes when Soundgarden: Showcases Cornell's badass wail (e.g., Slaves & Bulldozers).
+                                Loves: <br>
+                                Loathes: <br>
+                                Dreams of: <br>
+                                Afraid of: <br>
+                                Likes when Pearl Jam: <br>
+                                Likes when Alice in Chains: <br>
+                                Likes when Soundgarden:
                             </p>
                         </div>
                         <div v-if='selectedBio === "keith"'>
@@ -138,72 +139,92 @@
                 <a name='shows'></a>
                 <div id='show'>
                     <h2>Upcoming Shows</h2>
-                    <table>
-                        <tr>
-                            <td>Jul 28, 2023</td>
-                            <td>Tannery Row - <strong style="color:#B2505E;">**80'S VS 90'S WITH <a
-                                        href='https://www.denimarcade.com/' target='_blank'>DENIM
-                                        ARCADE</a>**</strong></td>
-                            <td><a href='https://goo.gl/maps/qtHRwqXR4v9Vs7sB6' target='_blank'
-                                    rel='nofollow'>Directions</a></td>
-                        </tr>
-                        <tr>
-                            <td>Jul 29, 2023</td>
-                            <td>Boot Barn - Gainesville</td>
-                            <td><a href='https://goo.gl/maps/keopwW85KX9wNaxh6' target='_blank'
-                                    rel='nofollow'>Directions</a></td>
-                        </tr>
-                        <tr>
-                            <td>Aug 4, 2023</td>
-                            <td>The Wing Cafe & Tap House</td>
-                            <td><a href='https: //goo.gl/maps/qovrcu73JSMPjV6g8' target='_blank'
-                                    rel='nofollow'>Directions</a></td>
-                        </tr>
-                        <tr>
-                            <td>Aug 19, 2023</td>
-                            <td>Dixie Tavern - <strong style="color:#B2505E;">**80's VS 90's WITH <a
-                                        href="https://madmargritt.com/" target="_blank" rel="nofollow"
-                                        style="color:#3b74f0;">MAD MARGRITT</a>**</strong></td>
-                            <td><a href='https://g.page/DixieTavernAtlanta?share' target='_blank'
-                                    rel='nofollow'>Directions</a></td>
-                        </tr>
-                        <tr>
-                            <td>Sep 22, 2023</td>
-                            <td>Southern Roots - McDonough</td>
-                            <td><a href='https://goo.gl/maps/McUZKx4eZUbUJDGk9' target='_blank'
-                                    rel='nofollow'>Directions</a></td>
-                        </tr>
-                        <tr>
-                            <td>Oct 20, 2023</td>
-                            <td>The Wing Cafe & Tap House</td>
-                            <td><a href='https://goo.gl/maps/qovrcu73JSMPjV6g8' target='_blank'
-                                    rel='nofollow'>Directions</a></td>
-                        </tr>
-                        <tr>
-                            <td>Nov 10, 2023</td>
-                            <td>Joe's Sports Bar & Grill - <strong style="color:#B2505E;">**80'S VS 90'S WITH <a
-                                        href='https://www.denimarcade.com/' target='_blank'>DENIM
-                                        ARCADE</a>**</strong></td>
-                            <td><a href='https://goo.gl/maps/DPXxBAuQGMgbcifW7' target=' _blank'
-                                    rel='nofollow'>Directions</a></td>
-                        </tr>
-                        <tr>
-                            <td>Dec 8, 2023</td>
-                            <td>The Wing Cafe & Tap House</td>
-                            <td><a href='https://goo.gl/maps/qovrcu73JSMPjV6g8' target='_blank'
-                                    rel='nofollow'>Directions</a></td>
-                        </tr>
-                        <tr>
-                            <td>Dec 9, 2023</td>
-                            <td>Chevelle's - Murphy, NC</td>
-                            <td><a href='https://goo.gl/maps/bVbqARox7VvFXCDj9' target='_blank'
-                                    rel='nofollow'>Directions</a></td>
-                        </tr>
-                        <tr>
-                            <td colspan='3'>More to be announced!</td>
-                        </tr>
-                    </table>
+                    <div id='list-container'>
+                        <div class='show-item'>
+                            <div class='show-left'>
+                                <span class='show-date'>Sep 22, 2023</span>
+                                <span class='show-description'>Southern Roots - McDonough</span>
+                            </div>
+                            <div class='show-right'>
+                                <a class='directions' href='https://goo.gl/maps/McUZKx4eZUbUJDGk9' target='_blank'
+                                    rel='nofollow'>Directions</a>
+                            </div>
+                        </div>
+                        <div class='show-item'>
+                            <div class='show-left'>
+                                <span class='show-date'>Oct 20, 2023</span>
+                                <span class='show-description'>The Wing Cafe & Tap House</span>
+                            </div>
+                            <div class='show-right'>
+                                <a class='directions' href='https://goo.gl/maps/qovrcu73JSMPjV6g8' target='_blank'
+                                    rel='nofollow'>Directions</a>
+                            </div>
+                        </div>
+                        <div class='show-item'>
+                            <div class='show-left'>
+                                <span class='show-date'>Nov 10, 2023</span>
+                                <span class='show-description'>
+                                    Joe's Sports Bar & Grill -
+                                    <br>
+                                    <strong style="color:#B2505E;">**80'S VS 90'S WITH <a
+                                            href='https://www.denimarcade.com/' target='_blank'>DENIM
+                                            ARCADE</a>**</strong>
+                                </span>
+                            </div>
+                            <div class='show-right'>
+                                <a class='directions' href='https://goo.gl/maps/DPXxBAuQGMgbcifW7' target='_blank'
+                                    rel='nofollow'>Directions</a>
+                            </div>
+                        </div>
+                        <div class='show-item'>
+                            <div class='show-left'>
+                                <span class='show-date'>Nov 18, 2023</span>
+                                <span class='show-description'>
+                                    Dixie Tavern -
+                                    <br>
+                                    <strong style="color:#B2505E;">**80'S VS 90'S WITH <a
+                                            href='https://www.denimarcade.com/' target='_blank'>DENIM
+                                            ARCADE</a>**</strong>
+                                </span>
+                            </div>
+                            <div class='show-right'>
+                                <a class='directions' href='https://g.page/DixieTavernAtlanta?share' target='_blank'
+                                    rel='nofollow'>Directions</a>
+                            </div>
+                        </div>
+                        <div class='show-item'>
+                            <div class='show-left'>
+                                <span class='show-date'>Nov 25, 2023</span>
+                                <span class='show-description'>Blackstrap Rock Hall</span>
+                            </div>
+                            <div class='show-right'>
+                                <a class='directions' href='https://goo.gl/maps/RtYHJrZG9beF6mef9' target='_blank'
+                                    rel='nofollow'>Directions</a>
+                            </div>
+                        </div>
+                        <div class='show-item'>
+                            <div class='show-left'>
+                                <span class='show-date'>Dec 8, 2023</span>
+                                <span class='show-description'>The Wing Cafe & Tap House</span>
+                            </div>
+                            <div class='show-right'>
+                                <a class='directions' href='https://goo.gl/maps/qovrcu73JSMPjV6g8' target='_blank'
+                                    rel='nofollow'>Directions</a>
+                            </div>
+                        </div>
+                        <div class='show-item'>
+                            <div class='show-left'>
+                                <span class='show-date'>Dec 9, 2023</span>
+                                <span class='show-description'>Chevelle's - Murphy, NC</span>
+                            </div>
+                            <div class='show-right'>
+                                <a class='directions' href='https://goo.gl/maps/bVbqARox7VvFXCDj9' target='_blank'
+                                    rel='nofollow'>Directions</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <div id='more-tba'>More to be announced!</div>
             </section>
             <section>
                 <a name='contact'></a>

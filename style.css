@@ -330,6 +330,12 @@ video:focus {
         padding: 0;
     }
 
+    header img.banner {
+        width: 75%;
+        height: auto;
+        margin: 0 auto;
+    }
+
     header nav {
         height: 0;
     }

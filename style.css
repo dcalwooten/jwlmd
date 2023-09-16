@@ -34,7 +34,8 @@ header {
 }
 
 header img {
-    width: 100%;
+    width: auto;
+    margin: 0 auto;
 }
 
 header nav {
@@ -56,12 +57,14 @@ header nav.sticky {
 
 header nav button#menu-toggle {
     display: none; /* hide for desktop view */
-    position: absolute;
-    left: 10px;
-    top: 50%;
+    position: fixed;
+    left: 0;
+    top: 25px;
     transform: translateY(-50%);
-    padding: 5px 10px;
+    padding: 5px 10px 5px 15px;
     background: #fff;
+    background-color: var(--primary-accent-color);
+    border-radius: 0 5px 5px 0;
 }
 
 header nav button#menu-toggle img {
@@ -325,6 +328,10 @@ video:focus {
         width: 100%;
         margin: 0 auto;
         padding: 0;
+    }
+
+    header nav {
+        height: 0;
     }
 
     header nav button#menu-toggle {

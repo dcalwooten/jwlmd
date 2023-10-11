@@ -8,32 +8,29 @@ window.addEventListener('load', function () {
     window.dispatchEvent(new CustomEvent('scroll'))
 
     function stickyNav() {
-        if (window.pageYOffset >= navOffset) { navBar.classList.add('sticky'); }
+        if (window.innerWidth > 834 && window.pageYOffset >= navOffset) { navBar.classList.add('sticky'); }
 
         else { navBar.classList.remove('sticky'); }
     }
 
-    var menu = document.getElementById('menu'),
-        menuToggle = document.getElementById('menu-toggle')
+    var menuToggle = document.getElementById('menu-toggle')
 
     menuToggle.addEventListener('click', function (e) {
         e.stopPropagation();
-        if (menu.classList.contains('is-active')) {
-            menu.classList.remove('is-active');
+        if (navBar.classList.contains('expanded')) {
             this.setAttribute('aria-expanded', 'false');
         }
-
         else {
-            menu.classList.add('is-active');
             this.setAttribute('aria-expanded', 'true');
         }
+
+        navBar.classList.toggle('expanded');
     });
 
     // collapse mobile menu when clicking outside of it
     document.addEventListener('click', function (e) {
-        if (menu.classList.contains('is-active') &&
-            e.target.closest('#menu') == null) {
-            menu.classList.remove('is-active');
+        if (navBar.classList.contains('expanded')) {
+            navBar.classList.remove('expanded');
             menuToggle.setAttribute('aria-expanded', 'false');
         }
     });

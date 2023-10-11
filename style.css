@@ -57,14 +57,6 @@ header nav.sticky {
 
 header nav button#menu-toggle {
     display: none; /* hide for desktop view */
-    position: fixed;
-    left: 0;
-    top: 25px;
-    transform: translateY(-50%);
-    padding: 5px 10px 5px 15px;
-    background: #fff;
-    background-color: var(--primary-accent-color);
-    border-radius: 0 5px 5px 0;
 }
 
 header nav button#menu-toggle img {
@@ -337,20 +329,36 @@ video:focus {
     }
 
     header nav {
-        height: 0;
+        width: calc(100% - (var(--menu-toggle-width) + 5px));
+        height: 100vh;
+        background: var(--primary-accent-color);
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: transform 200ms;
+        transform: translateX(-100%);
+
+        --menu-toggle-width: 70px;
+    }
+
+    header nav.expanded {
+        transform: translateX(0);
     }
 
     header nav button#menu-toggle {
         display: block;
-    }
-
-    header nav.sticky {
-        max-width: 100%;
+        width: var(--menu-toggle-width);
+        position: absolute;
+        right: calc(0px - var(--menu-toggle-width));
+        padding: 5px 10px 5px 15px;
+        background-color: var(--primary-accent-color);
+        border-radius: 0 5px 5px 0;
     }
 
     header nav ul {
-        display: none;
-        margin-top: 50px;
+        margin-top: 0;
+        padding: 0 10px;
+        text-align: left;
     }
 
     header nav ul.is-active {
@@ -359,8 +367,8 @@ video:focus {
 
     header nav ul li {
         display: block;
-        background: #fff;
-        border-bottom: 1px solid var(--primary-accent-color);
+        background: unset;
+        border-bottom: 1px solid #fff;
     }
 
     header nav ul li:hover,
@@ -370,9 +378,7 @@ video:focus {
         color: #fff;
     }
 
-    header nav ul li:hover a,
-    header nav ul li:active a,
-    header nav ul li:focus a {
+    header nav li a {
         color: #fff;
     }
 

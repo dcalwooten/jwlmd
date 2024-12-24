@@ -153,7 +153,7 @@ main .show-item {
 }
 
 main .show-item>div {
-    padding: 10px;
+    padding: 4px;
 }
 
 main .show-item .show-date {
@@ -168,7 +168,7 @@ main .show-item .directions {
     transition: 0.3s;
     background-color: var(--primary-accent-color);
     border-radius: 5px;
-    padding: 10px 25px;
+    padding: 10px 10px;
     color: #fff;
 }
 
@@ -264,11 +264,28 @@ img.section-img.float-right {
     margin-left: 20px;
 }
 
+div.fb-event-btn {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 50%;
+    transition: width height;
+    transition: 0.6s;
+}
+
+.fb-event-btn a img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
 div.social-media-btn {
     display: inline-block;
     width: 50px;
     height: 50px;
     margin: 10px;
+    padding-bottom: 0;
     border-radius: 50%;
     transition: width height;
     transition: 0.6s;
